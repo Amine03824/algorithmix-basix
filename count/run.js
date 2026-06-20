@@ -5,7 +5,7 @@ const args = process.argv.slice(2);
 const text = args[0];
 const letter = args[1];
 let result = 0
-for (i = 0; i <= text.length; i++){
+for (i = 0; i < text.length; i++){
 // console.log(i);
 // console.log(text[i]);
 
