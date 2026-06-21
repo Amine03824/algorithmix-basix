@@ -2,21 +2,22 @@
 const args = process.argv.slice(2);
 
 // Implement below:
-let  output = [];
-let splitString = "";
-const dividers = [",",";"];
-for (arg of args) {
-	// console.log("je suis à l'argument " + arg);
-	for (let i=0; i < arg.length; i++){
-		console.log("Je suis dans la boucle : " + i + "" + arg[i]);
-		if (arg[i] === dividers[0] || arg[i] === dividers[1]){
+let output = [];
+if (args.length === 2){
+	let originalString = args[0];
+	let delimiter = args[1];
+	let splitString = "";
+	for (let i = 0; i < originalString.length; i++){
+		if (originalString[i] === delimiter){
 			output.push(splitString);
 			splitString = "";
 		} else {
-		splitString += arg[i];
+			splsitString += originalString[i];
 		}
-	// console.log("La splitString est : " + splitString);
 	}
+	output.push(splitString);
+} else {
+	output = "2 arguments needed;"
 }
 
 // Do not change:
