@@ -9,13 +9,13 @@ if (args.length === 2){
 	let splitString = "";
 	for (let i = 0; i < originalString.length; i++){
 		if (originalString[i] === delimiter){
-			output.push(splitString);
+			output[output.length]= splitString;
 			splitString = "";
 		} else {
-			splsitString += originalString[i];
+			splitString += originalString[i];
 		}
 	}
-	output.push(splitString);
+	output[output.length] = splitString;
 } else {
 	output = "2 arguments needed;"
 }
